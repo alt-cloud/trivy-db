@@ -3,7 +3,7 @@ package bucket_test
 import (
 	"testing"
 
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/bucket"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/bucket"
 	"github.com/stretchr/testify/assert"
 )
 

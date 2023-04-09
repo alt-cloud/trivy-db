@@ -60,6 +60,6 @@ jobs:
           tags=(latest ${{ env.VERSION }})
           for tag in ${tags[@]}; do
             ./oras push ghcr.io/${{ github.repository }}:${tag} \
-              --manifest-config /dev/null:application/vnd.aquasec.trivy.config.v1+json \
+              --artifact-type /dev/null:application/vnd.aquasec.trivy.config.v1+json \
               db.tar.gz:application/vnd.aquasec.trivy.db.layer.v1.tar+gzip
           done

@@ -2,7 +2,7 @@ package alt
 
 import (
 	"encoding/xml"
-	"github.com/aquasecurity/trivy-db/pkg/types"
+	"github.com/ipaqsa/trivy-db/pkg/types"
 )
 
 type OVAL struct {

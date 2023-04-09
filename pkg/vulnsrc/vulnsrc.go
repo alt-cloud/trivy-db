@@ -1,19 +1,19 @@
 package vulnsrc
 
 import (
-	"github.com/aquasecurity/trivy-db/pkg/types"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/alt"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/bundler"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/composer"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/ghsa"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/glad"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/govulndb"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/mariner"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/node"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/osv"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/photon"
-	redhatoval "github.com/aquasecurity/trivy-db/pkg/vulnsrc/redhat-oval"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/wolfi"
+	"github.com/ipaqsa/trivy-db/pkg/types"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/alt"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/bundler"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/composer"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/ghsa"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/glad"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/govulndb"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/mariner"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/node"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/osv"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/photon"
+	redhatoval "github.com/ipaqsa/trivy-db/pkg/vulnsrc/redhat-oval"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/wolfi"
 )
 
 type VulnSrc interface {

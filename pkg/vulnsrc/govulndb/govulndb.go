@@ -12,11 +12,11 @@ import (
 	"golang.org/x/vuln/osv"
 	"golang.org/x/xerrors"
 
-	"github.com/aquasecurity/trivy-db/pkg/db"
-	"github.com/aquasecurity/trivy-db/pkg/types"
-	"github.com/aquasecurity/trivy-db/pkg/utils"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/bucket"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/ipaqsa/trivy-db/pkg/db"
+	"github.com/ipaqsa/trivy-db/pkg/types"
+	"github.com/ipaqsa/trivy-db/pkg/utils"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/bucket"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/vulnerability"
 )
 
 const govulndbDir = "go"

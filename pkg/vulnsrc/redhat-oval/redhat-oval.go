@@ -10,16 +10,16 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/aquasecurity/trivy-db/pkg/utils/ints"
+	"github.com/ipaqsa/trivy-db/pkg/utils/ints"
 
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 
-	"github.com/aquasecurity/trivy-db/pkg/db"
-	"github.com/aquasecurity/trivy-db/pkg/types"
-	"github.com/aquasecurity/trivy-db/pkg/utils"
-	ustrings "github.com/aquasecurity/trivy-db/pkg/utils/strings"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/ipaqsa/trivy-db/pkg/db"
+	"github.com/ipaqsa/trivy-db/pkg/types"
+	"github.com/ipaqsa/trivy-db/pkg/utils"
+	ustrings "github.com/ipaqsa/trivy-db/pkg/utils/strings"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/vulnerability"
 )
 
 const (

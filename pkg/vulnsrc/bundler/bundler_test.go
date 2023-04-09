@@ -1,10 +1,10 @@
 package bundler_test
 
 import (
-	"github.com/aquasecurity/trivy-db/pkg/types"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/bundler"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/vulnerability"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrctest"
+	"github.com/ipaqsa/trivy-db/pkg/types"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/bundler"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrctest"
 	"path/filepath"
 	"testing"
 )

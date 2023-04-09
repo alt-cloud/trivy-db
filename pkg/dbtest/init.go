@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	fixtures "github.com/aquasecurity/bolt-fixtures"
-	"github.com/aquasecurity/trivy-db/pkg/db"
+	"github.com/ipaqsa/trivy-db/pkg/db"
 	"github.com/stretchr/testify/require"
 )
 

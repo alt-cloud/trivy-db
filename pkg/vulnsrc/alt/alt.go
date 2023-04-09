@@ -2,17 +2,16 @@ package alt
 
 import (
 	"encoding/json"
-	"github.com/aquasecurity/trivy-db/pkg/db"
-	"github.com/aquasecurity/trivy-db/pkg/types"
-	ustrings "github.com/aquasecurity/trivy-db/pkg/utils/strings"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/ipaqsa/trivy-db/pkg/db"
+	"github.com/ipaqsa/trivy-db/pkg/types"
+	ustrings "github.com/ipaqsa/trivy-db/pkg/utils/strings"
+	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/vulnerability"
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 	"log"
 	"os"
 	"path"
 	"path/filepath"
-	"regexp"
 	"strings"
 )
 
@@ -22,9 +21,6 @@ const (
 
 var (
 	altDir = filepath.Join("oval", "alt")
-
-	moduleRegexp = regexp.MustCompile(`Module\s+(.*)\s+is enabled`)
-
 	source = types.DataSource{
 		ID:   vulnerability.ALT,
 		Name: "ALT",

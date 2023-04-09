@@ -1,6 +1,6 @@
 package redhatoval
 
-import "github.com/aquasecurity/trivy-db/pkg/types"
+import "github.com/ipaqsa/trivy-db/pkg/types"
 
 type redhatOVAL struct {
 	Class    string
