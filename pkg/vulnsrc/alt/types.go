@@ -1,25 +1,8 @@
 package alt
 
 import (
-	"encoding/xml"
 	"github.com/ipaqsa/trivy-db/pkg/types"
 )
-
-type OVAL struct {
-	XMLName     xml.Name    `xml:"oval_definitions"`
-	Generator   Generator   `xml:"generator"`
-	Definitions Definitions `xml:"definitions"`
-
-	Tests   Tests   `xml:"tests" json:",omitempty"`
-	Objects Objects `xml:"objects" json:",omitempty"`
-	States  States  `xml:"states" json:",omitempty"`
-}
-
-type Generator struct {
-	Timestamp     string `xml:"timestamp"`
-	ProductName   string `xml:"product_name"`
-	SchemaVersion string `xml:"schema_version"`
-}
 
 type Definitions struct {
 	Definition []Definition `xml:"definition" json:",omitempty"`
@@ -254,4 +237,11 @@ type CveEntry struct {
 	ID string `json:",omitempty"`
 
 	Severity types.Severity `json:",omitempty"`
+}
+
+type CveVendor struct {
+	Title       string
+	Description string
+	References  []string
+	CVE         CveEntry
 }

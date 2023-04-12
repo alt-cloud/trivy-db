@@ -64,7 +64,7 @@ func parseTests(dir string) (map[string]RpmInfoTestSpecial, error) {
 	}
 
 	var tests Tests
-	if err := unmarshalJSONFile(&tests, filepath.Join(dir, "tests.json")); err != nil {
+	if err = unmarshalJSONFile(&tests, filepath.Join(dir, "tests.json")); err != nil {
 		return nil, xerrors.Errorf("failed to unmarshal states: %w", err)
 	}
 
@@ -114,7 +114,7 @@ func followTestRefs(test RpmInfoTest, objects map[string]RpmInfoObject, states m
 	}
 
 	//t.SignatureKeyID = state.SignatureKeyID
-	//
+
 	if state.Arch.Datatype == "string" && (state.Arch.Operation == "pattern match" || state.Arch.Operation == "equals") {
 		t.Arch = state.Arch.Text
 	}
