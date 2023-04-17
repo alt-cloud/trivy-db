@@ -226,7 +226,7 @@ func (vs VulnSrc) save(advisories map[bucket]AdvisorySpecial) error {
 		}
 		for bkt, advisory := range advisories {
 			if err := vs.dbc.PutAdvisoryDetail(tx, bkt.vulnID, bkt.pkgName, []string{rootBucket}, advisory); err != nil {
-				return xerrors.Errorf("failed to save Red Hat OVAL advisory: %w", err)
+				return xerrors.Errorf("failed to save ALT OVAL advisory: %w", err)
 			}
 
 			if err := vs.dbc.PutVulnerabilityID(tx, bkt.vulnID); err != nil {
@@ -275,7 +275,7 @@ func (vs VulnSrc) putVendorVulnerabilityDetail(tx *bolt.Tx, cve CveVendor) error
 		Description:  cve.Description,
 	}
 	if err := vs.dbc.PutVulnerabilityDetail(tx, cve.CVE.ID, vulnerability.ALT, vuln); err != nil {
-		return xerrors.Errorf("failed to save Red Hat vulnerability: %w", err)
+		return xerrors.Errorf("failed to save ALT Vendor vulnerability: %w", err)
 	}
 
 	if err := vs.dbc.PutVulnerabilityID(tx, cve.CVE.ID); err != nil {
@@ -302,10 +302,9 @@ func (vs VulnSrc) Get(pkgName, cpe string) ([]types.Advisory, error) {
 		}
 
 		for _, entry := range adv.Entries {
-			//if !contains(entry.AffectedCPEList, cpe) {
-			//	continue
-			//}
-
+			if !contains(entry.AffectedCPEList, cpe) {
+				continue
+			}
 			for _, cve := range entry.Cves {
 				advisory := types.Advisory{
 					Severity:     cve.Severity,

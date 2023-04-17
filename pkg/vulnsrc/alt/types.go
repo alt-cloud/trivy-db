@@ -37,13 +37,20 @@ type Reference struct {
 }
 
 type Advisory struct {
-	From            string  `xml:"from,attr" json:",omitempty"`
-	Severity        string  `xml:"severity" json:",omitempty"`
-	Rights          string  `xml:"rights" json:",omitempty"`
-	Issued          Issued  `xml:"issued" json:",omitempty"`
-	Updated         Updated `xml:"updated" json:",omitempty"`
-	Cves            []CVE   `xml:"cve" json:",omitempty"`
-	AffectedCpeList []CPE   `xml:"affected_cpe_list" json:",omitempty"`
+	From            string     `xml:"from,attr" json:",omitempty"`
+	Severity        string     `xml:"severity" json:",omitempty"`
+	Rights          string     `xml:"rights" json:",omitempty"`
+	Issued          Issued     `xml:"issued" json:",omitempty"`
+	Updated         Updated    `xml:"updated" json:",omitempty"`
+	Cves            []CVE      `xml:"cve" json:",omitempty"`
+	Bugzilla        []Bugzilla `xml:"bugzilla" json:",omitempty"`
+	AffectedCpeList []CPE      `xml:"affected_cpe_list" json:",omitempty"`
+}
+
+type Bugzilla struct {
+	Id   string `xml:"id,attr" json:",omitempty"`
+	Href string `xml:"href,attr" json:",omitempty"`
+	Data string `json:",chardata" json:",omitempty"`
 }
 
 type Issued struct {
@@ -56,7 +63,7 @@ type Updated struct {
 
 type CVE struct {
 	Cvss3  string `xml:"cvss3,attr" json:",omitempty"`
-	Cve    string `xml:"cve,attr"   json:",omitempty"`
+	Cwe    string `xml:"cwe,attr"   json:",omitempty"`
 	Href   string `xml:"href,attr"   json:",omitempty"`
 	Impact string `xml:"impact,attr" json:",omitempty"`
 	Public string `xml:"public,attr" json:",omitempty"`
@@ -98,8 +105,8 @@ type State struct {
 }
 
 type Object struct {
-	StateRef string `xml:"state_ref,attr" json:",omitempty"`
-	Text     string `xml:"object" json:",omitempty"`
+	ObjectRef string `xml:"object_ref,attr" json:",omitempty"`
+	Text      string `xml:"object" json:",omitempty"`
 }
 
 type RpmInfoTest struct {
