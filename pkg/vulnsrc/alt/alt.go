@@ -25,7 +25,7 @@ var (
 	source     = types.DataSource{
 		ID:   vulnerability.ALT,
 		Name: "alt",
-		URL:  "",
+		URL:  "https://rdb.altlinux.org",
 	}
 )
 
@@ -342,10 +342,10 @@ func toReferences(references []Reference) []string {
 	}
 	return data
 }
-func cpeToList(cpes []CPE) []string {
+func cpeToList(cpes AffectedCpeList) []string {
 	var list []string
-	for _, cpe := range cpes {
-		list = append(list, cpe.Cpe)
+	for _, cpe := range cpes.Cpe {
+		list = append(list, cpe)
 	}
 	return list
 }

@@ -37,14 +37,14 @@ type Reference struct {
 }
 
 type Advisory struct {
-	From            string     `xml:"from,attr" json:",omitempty"`
-	Severity        string     `xml:"severity" json:",omitempty"`
-	Rights          string     `xml:"rights" json:",omitempty"`
-	Issued          Issued     `xml:"issued" json:",omitempty"`
-	Updated         Updated    `xml:"updated" json:",omitempty"`
-	Cves            []CVE      `xml:"cve" json:",omitempty"`
-	Bugzilla        []Bugzilla `xml:"bugzilla" json:",omitempty"`
-	AffectedCpeList []CPE      `xml:"affected_cpe_list" json:",omitempty"`
+	From            string          `xml:"from,attr" json:",omitempty"`
+	Severity        string          `xml:"severity" json:",omitempty"`
+	Rights          string          `xml:"rights" json:",omitempty"`
+	Issued          Issued          `xml:"issued" json:",omitempty"`
+	Updated         Updated         `xml:"updated" json:",omitempty"`
+	Cves            []CVE           `xml:"cve" json:",omitempty"`
+	Bugzilla        []Bugzilla      `xml:"bugzilla" json:",omitempty"`
+	AffectedCpeList AffectedCpeList `xml:"affected_cpe_list" json:",omitempty"`
 }
 
 type Bugzilla struct {
@@ -70,8 +70,8 @@ type CVE struct {
 	CveID  string `xml:",chardata"  json:",omitempty"`
 }
 
-type CPE struct {
-	Cpe string `xml:"cpe" json:",omitempty"`
+type AffectedCpeList struct {
+	Cpe []string `xml:"cpe" json:",omitempty"`
 }
 
 type Criteria struct {
