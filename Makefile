@@ -85,4 +85,4 @@ db-clean:
 .PHONY: db-fetch-vuln-list
 db-fetch-vuln-list:
 	mkdir -p cache/vuln-list
-	wget -qO - https://github.com/ipaqsa/vuln-list/archive/main.tar.gz | tar xz -C cache/vuln-list --strip-components=1
+	wget -qO - https://github.com/alt-cloud/vuln-list/archive/main.tar.gz | tar xz -C cache/vuln-list --strip-components=1
