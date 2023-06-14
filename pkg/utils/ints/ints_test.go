@@ -3,7 +3,7 @@ package ints_test
 import (
 	"testing"
 
-	"github.com/ipaqsa/trivy-db/pkg/utils/ints"
+	"github.com/alt-cloud/trivy-db/pkg/utils/ints"
 
 	"github.com/stretchr/testify/assert"
 )

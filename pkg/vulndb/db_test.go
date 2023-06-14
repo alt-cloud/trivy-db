@@ -14,13 +14,13 @@ import (
 	"k8s.io/utils/clock"
 	fake "k8s.io/utils/clock/testing"
 
-	"github.com/ipaqsa/trivy-db/pkg/db"
-	"github.com/ipaqsa/trivy-db/pkg/dbtest"
-	"github.com/ipaqsa/trivy-db/pkg/metadata"
-	"github.com/ipaqsa/trivy-db/pkg/types"
-	"github.com/ipaqsa/trivy-db/pkg/vulndb"
-	"github.com/ipaqsa/trivy-db/pkg/vulnsrc"
-	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/alt-cloud/trivy-db/pkg/db"
+	"github.com/alt-cloud/trivy-db/pkg/dbtest"
+	"github.com/alt-cloud/trivy-db/pkg/metadata"
+	"github.com/alt-cloud/trivy-db/pkg/types"
+	"github.com/alt-cloud/trivy-db/pkg/vulndb"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrc"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
 )
 
 type fakeVulnSrc struct{}

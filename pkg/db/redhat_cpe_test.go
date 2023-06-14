@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ipaqsa/trivy-db/pkg/db"
-	"github.com/ipaqsa/trivy-db/pkg/dbtest"
+	"github.com/alt-cloud/trivy-db/pkg/db"
+	"github.com/alt-cloud/trivy-db/pkg/dbtest"
 )
 
 func TestConfig_GetRedHatCPEs(t *testing.T) {

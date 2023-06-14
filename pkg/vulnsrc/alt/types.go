@@ -1,7 +1,7 @@
 package alt
 
 import (
-	"github.com/ipaqsa/trivy-db/pkg/types"
+	"github.com/alt-cloud/trivy-db/pkg/types"
 )
 
 type Definitions struct {

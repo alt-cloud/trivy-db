@@ -3,7 +3,7 @@ package strings_test
 import (
 	"testing"
 
-	"github.com/ipaqsa/trivy-db/pkg/utils/strings"
+	"github.com/alt-cloud/trivy-db/pkg/utils/strings"
 
 	"github.com/stretchr/testify/assert"
 )

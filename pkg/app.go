@@ -3,9 +3,9 @@ package pkg
 import (
 	"time"
 
-	"github.com/ipaqsa/trivy-db/pkg/utils"
+	"github.com/alt-cloud/trivy-db/pkg/utils"
 
-	"github.com/ipaqsa/trivy-db/pkg/vulnsrc"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrc"
 	"github.com/urfave/cli"
 )
 

@@ -2,10 +2,10 @@ package alt
 
 import (
 	"encoding/json"
-	"github.com/ipaqsa/trivy-db/pkg/db"
-	"github.com/ipaqsa/trivy-db/pkg/types"
-	ustrings "github.com/ipaqsa/trivy-db/pkg/utils/strings"
-	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/alt-cloud/trivy-db/pkg/db"
+	"github.com/alt-cloud/trivy-db/pkg/types"
+	ustrings "github.com/alt-cloud/trivy-db/pkg/utils/strings"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 	"log"

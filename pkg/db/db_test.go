@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ipaqsa/trivy-db/pkg/db"
+	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/stretchr/testify/require"
 )
 

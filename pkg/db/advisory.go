@@ -3,7 +3,7 @@ package db
 import (
 	"encoding/json"
 
-	"github.com/ipaqsa/trivy-db/pkg/types"
+	"github.com/alt-cloud/trivy-db/pkg/types"
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 )

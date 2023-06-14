@@ -1,4 +1,4 @@
-module github.com/ipaqsa/trivy-db
+module github.com/alt-cloud/trivy-db
 
 go 1.17
 

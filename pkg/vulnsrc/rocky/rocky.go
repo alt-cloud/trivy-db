@@ -11,11 +11,11 @@ import (
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 
-	"github.com/ipaqsa/trivy-db/pkg/db"
-	"github.com/ipaqsa/trivy-db/pkg/types"
-	"github.com/ipaqsa/trivy-db/pkg/utils"
-	ustrings "github.com/ipaqsa/trivy-db/pkg/utils/strings"
-	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/alt-cloud/trivy-db/pkg/db"
+	"github.com/alt-cloud/trivy-db/pkg/types"
+	"github.com/alt-cloud/trivy-db/pkg/utils"
+	ustrings "github.com/alt-cloud/trivy-db/pkg/utils/strings"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
 )
 
 const (

@@ -5,13 +5,13 @@ import (
 
 	bolt "go.etcd.io/bbolt"
 
-	"github.com/ipaqsa/trivy-db/pkg/types"
+	"github.com/alt-cloud/trivy-db/pkg/types"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ipaqsa/trivy-db/pkg/db"
-	"github.com/ipaqsa/trivy-db/pkg/dbtest"
+	"github.com/alt-cloud/trivy-db/pkg/db"
+	"github.com/alt-cloud/trivy-db/pkg/dbtest"
 )
 
 func TestConfig_SaveAdvisoryDetails(t *testing.T) {

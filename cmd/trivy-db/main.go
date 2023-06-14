@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/ipaqsa/trivy-db/pkg"
+	"github.com/alt-cloud/trivy-db/pkg"
 )
 
 var (

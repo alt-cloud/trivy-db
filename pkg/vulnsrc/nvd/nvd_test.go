@@ -1,13 +1,13 @@
 package nvd
 
 import (
-	"github.com/ipaqsa/trivy-db/pkg/vulnsrctest"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
 	"path/filepath"
 	"testing"
 
-	"github.com/ipaqsa/trivy-db/pkg/utils"
+	"github.com/alt-cloud/trivy-db/pkg/utils"
 
-	"github.com/ipaqsa/trivy-db/pkg/types"
+	"github.com/alt-cloud/trivy-db/pkg/types"
 )
 
 func TestVulnSrc_Update(t *testing.T) {

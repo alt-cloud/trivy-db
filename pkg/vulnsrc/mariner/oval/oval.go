@@ -2,7 +2,7 @@ package oval
 
 import (
 	"encoding/json"
-	"github.com/ipaqsa/trivy-db/pkg/utils"
+	"github.com/alt-cloud/trivy-db/pkg/utils"
 	"io"
 	"path/filepath"
 

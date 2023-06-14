@@ -3,7 +3,7 @@
 package db
 
 import (
-	types "github.com/ipaqsa/trivy-db/pkg/types"
+	types "github.com/alt-cloud/trivy-db/pkg/types"
 	mock "github.com/stretchr/testify/mock"
 	bbolt "go.etcd.io/bbolt"
 )

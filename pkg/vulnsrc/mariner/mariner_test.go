@@ -1,14 +1,14 @@
 package mariner_test
 
 import (
-	"github.com/ipaqsa/trivy-db/pkg/vulnsrctest"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
 	"path/filepath"
 	"testing"
 
-	"github.com/ipaqsa/trivy-db/pkg/types"
-	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/mariner"
-	cbl "github.com/ipaqsa/trivy-db/pkg/vulnsrc/mariner"
-	"github.com/ipaqsa/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/alt-cloud/trivy-db/pkg/types"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/mariner"
+	cbl "github.com/alt-cloud/trivy-db/pkg/vulnsrc/mariner"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
 )
 
 func TestVulnSrc_Update(t *testing.T) {
