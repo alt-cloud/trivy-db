@@ -115,16 +115,16 @@ func parseDefinitions(definitions Definitions, tests map[string]RpmInfoTestSpeci
 
 			vendorCVEs = append(vendorCVEs, CveVendor{CVE: vendorCve, Title: advisory.Metadata.Title,
 				Description: advisory.Metadata.Description, References: toReferences(advisory.Metadata.References)})
-			
+
 			for _, bdu := range advisory.Metadata.Advisory.BDUs {
 				bduEntry := CveEntry{
 					ID:       bdu.CveID,
 					Severity: severityFromImpact(bdu.Impact),
 				}
 				cveEntries = append(cveEntries, bduEntry)
-				vendorCVEs = append(vendorCVEs, CveVendor{CVE: bduEntry, Title: bdu.Href, Description: "", References: []string{bdu.Href}})
+				vendorCVEs = append(vendorCVEs, CveVendor{CVE: bduEntry, Title: "", Description: "", References: []string{bdu.Href}})
 			}
-			
+
 			for _, cve := range advisory.Metadata.Advisory.Cves {
 				cveEntries = append(cveEntries, CveEntry{
 					ID:       cve.CveID,
