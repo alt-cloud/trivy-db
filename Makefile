@@ -87,7 +87,6 @@ db-clean:
 .PHONY: db-fetch-vuln-list
 db-fetch-vuln-list:
 	mkdir -p cache/vuln-list
-	wget -qO - https://github.com/alt-cloud/vuln-list/archive/main.tar.gz | tar xz -C cache/vuln-list --strip-components=1
 	wget -qO - https://github.com/$(REPO_OWNER)/vuln-list/archive/main.tar.gz | tar xz -C cache/vuln-list --strip-components=1
 	mkdir -p cache/vuln-list-redhat
 	wget -qO - https://github.com/$(REPO_OWNER)/vuln-list-redhat/archive/main.tar.gz | tar xz -C cache/vuln-list-redhat --strip-components=1
@@ -95,3 +94,5 @@ db-fetch-vuln-list:
 	wget -qO - https://github.com/$(REPO_OWNER)/vuln-list-debian/archive/main.tar.gz | tar xz -C cache/vuln-list-debian --strip-components=1
 	mkdir -p cache/vuln-list-nvd
 	wget -qO - https://github.com/$(REPO_OWNER)/vuln-list-nvd/archive/main.tar.gz | tar xz -C cache/vuln-list-nvd --strip-components=1
+	mkdir -p cache/vuln-list-alt
+	wget -qO - https://github.com/alt-cloud/vuln-list-alt/archive/main.tar.gz | tar xz -C cache/vuln-list-alt --strip-components=1

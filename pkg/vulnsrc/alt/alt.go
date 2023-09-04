@@ -2,26 +2,27 @@ package alt
 
 import (
 	"encoding/json"
+	"log"
+	"os"
+	"path"
+	"path/filepath"
+	"strings"
+
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	ustrings "github.com/alt-cloud/trivy-db/pkg/utils/strings"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
-	"log"
-	"os"
-	"path"
-	"path/filepath"
-	"strings"
 )
 
 const (
 	rootBucket = "alt"
+	altDir     = "vuln-list-alt"
 )
 
 var (
 	vendorCVEs []CveVendor
-	altDir     = filepath.Join("oval", "alt")
 	source     = types.DataSource{
 		ID:   vulnerability.ALT,
 		Name: "alt",
@@ -44,7 +45,7 @@ func (vs VulnSrc) Name() types.SourceID {
 }
 
 func (vs VulnSrc) Update(dir string) error {
-	rootDir := filepath.Join(dir, "vuln-list", altDir)
+	rootDir := filepath.Join(dir, altDir, "oval")
 	branches, err := os.ReadDir(rootDir)
 	if err != nil {
 		return xerrors.Errorf("unable to list directory entries (%s): %w", rootDir, err)
