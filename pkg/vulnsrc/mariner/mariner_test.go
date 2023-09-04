@@ -1,12 +1,12 @@
 package mariner_test
 
 import (
-	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
 	"path/filepath"
 	"testing"
 
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
+
 	"github.com/alt-cloud/trivy-db/pkg/types"
-	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/mariner"
 	cbl "github.com/alt-cloud/trivy-db/pkg/vulnsrc/mariner"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
 )
@@ -176,7 +176,7 @@ func TestVulnSrc_Get(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			vs := mariner.NewVulnSrc()
+			vs := cbl.NewVulnSrc()
 			vulnsrctest.TestGet(t, vs, vulnsrctest.TestGetArgs{
 				Fixtures:   tt.fixtures,
 				WantValues: tt.want,

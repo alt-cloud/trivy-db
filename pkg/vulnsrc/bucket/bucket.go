@@ -35,6 +35,12 @@ func Name(ecosystem, dataSource string) string {
 		prefix = vulnerability.Erlang
 	case "pub":
 		prefix = vulnerability.Pub
+	case "swift":
+		prefix = vulnerability.Swift
+	case "cocoapods":
+		prefix = vulnerability.Cocoapods
+	case "bitnami":
+		prefix = vulnerability.Bitnami
 	default:
 		return ""
 	}

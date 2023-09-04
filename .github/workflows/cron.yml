@@ -5,6 +5,7 @@ on:
     - cron: '0 */6 * * *'
   workflow_dispatch:
 env:
+  REPO_OWNER: ${{ github.repository_owner }} # used in 'make db-build'
   GH_USER: alt-cloud
   VERSION: 2
 jobs:
@@ -12,17 +13,17 @@ jobs:
     name: Build DB
     runs-on: ubuntu-latest
     steps:
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v3
+
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: 1.17
-        id: go
+          go-version-file: go.mod
 
       - name: Install bbolt
         run: go install go.etcd.io/bbolt/cmd/bbolt@v1.3.5
 
-      - name: Check out code into the Go module directory
-        uses: actions/checkout@v3
 
       - name: Download vuln-list and advisories
         run: make db-fetch-langs db-fetch-vuln-list
@@ -51,6 +52,7 @@ jobs:
 
       - name: Install oras
         run: |
+          # upgrade to ORAS 1.0.0
           curl -LO https://github.com/oras-project/oras/releases/download/v1.0.0/oras_1.0.0_linux_amd64.tar.gz
           tar -xvf ./oras_1.0.0_linux_amd64.tar.gz
 
@@ -59,7 +61,7 @@ jobs:
           ./oras version
           tags=(latest ${{ env.VERSION }})
           for tag in ${tags[@]}; do
-            ./oras push ghcr.io/${{ github.repository }}:${tag} \
-              --artifact-type /dev/null:application/vnd.aquasec.trivy.config.v1+json \
+            ./oras push --artifact-type application/vnd.aquasec.trivy.config.v1+json \
+              ghcr.io/${{ github.repository }}:${tag} \
               db.tar.gz:application/vnd.aquasec.trivy.db.layer.v1.tar+gzip
           done
