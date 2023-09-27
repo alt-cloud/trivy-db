@@ -7,7 +7,7 @@ import (
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
-	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/ghsa"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/ghsa"
 )
 
 func TestVulnSrc_Update(t *testing.T) {
@@ -76,6 +76,59 @@ func TestVulnSrc_Update(t *testing.T) {
 				{
 					Key: []string{
 						"data-source",
+						"cargo::GitHub Security Advisory Rust",
+					},
+					Value: types.DataSource{
+						ID:   vulnerability.GHSA,
+						Name: "GitHub Security Advisory Rust",
+						URL:  "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust",
+					},
+				},
+				{
+					Key: []string{
+						"advisory-detail",
+						"CVE-2020-25792",
+						"cargo::GitHub Security Advisory Rust",
+						"sized-chunks",
+					},
+					Value: types.Advisory{
+						VendorIDs: []string{
+							"GHSA-mp6f-p9gp-vpj9",
+						},
+						PatchedVersions:    []string{"0.6.3"},
+						VulnerableVersions: []string{"<0.6.3"},
+					},
+				},
+				{
+					Key: []string{
+						"vulnerability-detail",
+						"CVE-2020-25792",
+						"ghsa",
+					},
+					Value: types.VulnerabilityDetail{
+						Title:       "Array size is not checked in sized-chunks",
+						Description: "An issue was discovered in the sized-chunks crate through 0.6.2 for Rust. In the Chunk implementation, the array size is not checked when constructed with pair().",
+						References: []string{
+							"https://nvd.nist.gov/vuln/detail/CVE-2020-25792",
+							"https://github.com/bodil/sized-chunks/issues/11",
+							"https://github.com/bodil/sized-chunks",
+							"https://rustsec.org/advisories/RUSTSEC-2020-0041.html",
+						},
+						Severity:     types.SeverityHigh,
+						CvssVectorV3: "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+						CvssScoreV3:  7.5,
+					},
+				},
+				{
+					Key: []string{
+						"vulnerability-id",
+						"CVE-2020-25792",
+					},
+					Value: map[string]interface{}{},
+				},
+				{
+					Key: []string{
+						"data-source",
 						"go::GitHub Security Advisory Go",
 					},
 					Value: types.DataSource{
@@ -96,7 +149,7 @@ func TestVulnSrc_Update(t *testing.T) {
 							"GHSA-f5pg-7wfw-84q9",
 						},
 						PatchedVersions:    []string{"1.34.0"},
-						VulnerableVersions: []string{">=0, <1.34.0"},
+						VulnerableVersions: []string{"<1.34.0"},
 					},
 				},
 				{
@@ -162,7 +215,7 @@ func TestVulnSrc_Update(t *testing.T) {
 						VulnerableVersions: []string{
 							">=2.41.0, <2.42.0",
 							">=2.39.0, <2.39.1",
-							">=0, <2.29.1",
+							"<2.29.1",
 						},
 					},
 				},
@@ -196,7 +249,7 @@ func TestVulnSrc_Update(t *testing.T) {
 						VulnerableVersions: []string{
 							">=2.41.0, <2.42.0",
 							">=2.39.0, <2.39.1",
-							">=0, <2.29.1",
+							"<2.29.1",
 						},
 					},
 				},
@@ -219,7 +272,7 @@ func TestVulnSrc_Update(t *testing.T) {
 						VulnerableVersions: []string{
 							">=2.41.0, <2.42.0",
 							">=2.39.0, <2.39.1",
-							">=0, <2.29.1",
+							"<2.29.1",
 						},
 					},
 				},

@@ -2,6 +2,7 @@ package photon
 
 import (
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
+
 	"path/filepath"
 	"testing"
 

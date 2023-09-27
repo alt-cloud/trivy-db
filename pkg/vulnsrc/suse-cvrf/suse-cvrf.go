@@ -9,7 +9,6 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/hashicorp/go-version"
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 
@@ -17,6 +16,7 @@ import (
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/utils"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
+	version "github.com/aquasecurity/go-pep440-version"
 )
 
 type Distribution int
@@ -192,7 +192,7 @@ func getOSVersion(platformName string) string {
 			log.Printf("invalid version: %s", platformName)
 			return ""
 		}
-		if _, err := version.NewVersion(ss[2]); err != nil {
+		if _, err := version.Parse(ss[2]); err != nil {
 			log.Printf("invalid version: %s, err: %s", platformName, err)
 			return ""
 		}

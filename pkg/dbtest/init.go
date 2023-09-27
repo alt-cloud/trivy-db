@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	fixtures "github.com/aquasecurity/bolt-fixtures"
 	"github.com/alt-cloud/trivy-db/pkg/db"
+	fixtures "github.com/aquasecurity/bolt-fixtures"
 	"github.com/stretchr/testify/require"
 )
 

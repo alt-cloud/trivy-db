@@ -11,7 +11,7 @@ import (
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
 )
 
-var bucketName = bucket.Name(string(vulnerability.Bitnami), "Bitnami Vulnerability Database")
+var bucketName = bucket.Name(vulnerability.Bitnami, "Bitnami Vulnerability Database")
 
 func TestVulnSrc_Update(t *testing.T) {
 	tests := []struct {
@@ -46,6 +46,23 @@ func TestVulnSrc_Update(t *testing.T) {
 						VulnerableVersions: []string{"=5.15.12"},
 						PatchedVersions:    []string{},
 						VendorIDs:          []string{"BIT-2020-11998"},
+					},
+				},
+				{
+					Key: []string{
+						"advisory-detail",
+						"CVE-2020-12603",
+						bucketName,
+						"envoy",
+					},
+					Value: types.Advisory{
+						VulnerableVersions: []string{
+							"<1.12.4",
+							"=1.13.2",
+							"=1.14.2",
+						},
+						PatchedVersions: []string{"1.12.4"},
+						VendorIDs:       []string{"BIT-2020-12603"},
 					},
 				},
 				{

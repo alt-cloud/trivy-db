@@ -1,8 +1,9 @@
 package ubuntu_test
 
 import (
-	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
 	"testing"
+
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
 
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/ubuntu"

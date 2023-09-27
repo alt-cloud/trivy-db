@@ -3,12 +3,11 @@ package db_test
 import (
 	"testing"
 
-	bolt "go.etcd.io/bbolt"
-
 	"github.com/alt-cloud/trivy-db/pkg/types"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	bolt "go.etcd.io/bbolt"
 
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/dbtest"

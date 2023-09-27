@@ -1,12 +1,13 @@
 package bundler_test
 
 import (
+	"path/filepath"
+	"testing"
+
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/bundler"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
-	"path/filepath"
-	"testing"
 )
 
 func TestVulnSrc_Update(t *testing.T) {

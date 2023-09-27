@@ -2,6 +2,7 @@ package alma_test
 
 import (
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
+
 	"path/filepath"
 	"testing"
 
