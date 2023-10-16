@@ -354,10 +354,7 @@ func toReferences(references []Reference) []string {
 }
 func cpeToList(cpes AffectedCpeList) []string {
 	var list []string
-	for _, cpe := range cpes.Cpe {
-		list = append(list, cpe)
-	}
-	return list
+	return append(list, cpes.Cpe...)
 }
 func archesEqual(a, b []string) bool {
 	if len(a) != len(b) {

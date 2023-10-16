@@ -51,7 +51,7 @@ type Advisory struct {
 type Bugzilla struct {
 	Id   string `xml:"id,attr" json:",omitempty"`
 	Href string `xml:"href,attr" json:",omitempty"`
-	Data string `json:",chardata" json:",omitempty"`
+	Data string `xml:",chardata" json:",omitempty"`
 }
 
 type Issued struct {
