@@ -6,8 +6,9 @@ import (
 	"testing"
 
 	"github.com/alt-cloud/trivy-db/pkg/db"
-	fixtures "github.com/aquasecurity/bolt-fixtures"
 	"github.com/stretchr/testify/require"
+
+	fixtures "github.com/aquasecurity/bolt-fixtures"
 )
 
 func InitDB(t *testing.T, fixtureFiles []string) string {

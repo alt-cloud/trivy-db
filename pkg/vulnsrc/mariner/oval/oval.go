@@ -6,7 +6,6 @@ import (
 	"path/filepath"
 
 	"github.com/alt-cloud/trivy-db/pkg/utils"
-
 	"golang.org/x/xerrors"
 )
 

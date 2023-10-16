@@ -1,11 +1,10 @@
 package pkg
 
 import (
-	"github.com/urfave/cli"
-	"golang.org/x/xerrors"
-
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/vulndb"
+	"github.com/urfave/cli"
+	"golang.org/x/xerrors"
 )
 
 func build(c *cli.Context) error {

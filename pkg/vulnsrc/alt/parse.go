@@ -2,9 +2,10 @@ package alt
 
 import (
 	"encoding/json"
-	"golang.org/x/xerrors"
 	"os"
 	"path/filepath"
+
+	"golang.org/x/xerrors"
 )
 
 type RpmInfoTestSpecial struct {

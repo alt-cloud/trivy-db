@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 
 	"github.com/alt-cloud/trivy-db/pkg/types"
-
 	bolt "go.etcd.io/bbolt"
 	"golang.org/x/xerrors"
 )

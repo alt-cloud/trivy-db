@@ -4,12 +4,11 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
-
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/dbtest"
 	"github.com/alt-cloud/trivy-db/pkg/types"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 type Updater interface {

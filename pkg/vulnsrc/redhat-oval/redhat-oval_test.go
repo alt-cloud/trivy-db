@@ -6,17 +6,15 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
-
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
-
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/dbtest"
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/utils"
 	redhat "github.com/alt-cloud/trivy-db/pkg/vulnsrc/redhat-oval"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestMain(m *testing.M) {

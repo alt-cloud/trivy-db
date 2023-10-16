@@ -9,16 +9,15 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/samber/lo"
-	bolt "go.etcd.io/bbolt"
-	"golang.org/x/exp/slices"
-	"golang.org/x/xerrors"
-
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/utils"
 	ustrings "github.com/alt-cloud/trivy-db/pkg/utils/strings"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/samber/lo"
+	bolt "go.etcd.io/bbolt"
+	"golang.org/x/exp/slices"
+	"golang.org/x/xerrors"
 )
 
 const (

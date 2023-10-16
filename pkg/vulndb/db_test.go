@@ -8,12 +8,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
-	"golang.org/x/xerrors"
-	"k8s.io/utils/clock"
-	fake "k8s.io/utils/clock/testing"
-
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/dbtest"
 	"github.com/alt-cloud/trivy-db/pkg/metadata"
@@ -21,6 +15,11 @@ import (
 	"github.com/alt-cloud/trivy-db/pkg/vulndb"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+	"golang.org/x/xerrors"
+	"k8s.io/utils/clock"
+	fake "k8s.io/utils/clock/testing"
 )
 
 type fakeVulnSrc struct{}

@@ -6,11 +6,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"golang.org/x/xerrors"
-
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/osv"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
+	"golang.org/x/xerrors"
 )
 
 const (

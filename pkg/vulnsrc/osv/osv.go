@@ -8,19 +8,18 @@ import (
 	"strings"
 	"time"
 
-	"github.com/goark/go-cvss/v3/metric"
-	"github.com/samber/lo"
-	bolt "go.etcd.io/bbolt"
-	"go.uber.org/zap"
-	"golang.org/x/exp/maps"
-	"golang.org/x/xerrors"
-
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/log"
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/utils"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/bucket"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/goark/go-cvss/v3/metric"
+	"github.com/samber/lo"
+	bolt "go.etcd.io/bbolt"
+	"go.uber.org/zap"
+	"golang.org/x/exp/maps"
+	"golang.org/x/xerrors"
 )
 
 type Advisory struct {
@@ -82,6 +81,9 @@ func (o OSV) Update(root string) error {
 
 	var entries []Entry
 	err := utils.FileWalk(rootDir, func(r io.Reader, path string) error {
+		if filepath.Ext(path) != ".json" {
+			return nil
+		}
 		var entry Entry
 		if err := json.NewDecoder(r).Decode(&entry); err != nil {
 			return xerrors.Errorf("JSON decode error (%s): %w", path, err)
@@ -360,6 +362,8 @@ func convertEcosystem(eco Ecosystem) types.Ecosystem {
 		return vulnerability.Swift
 	case "bitnami":
 		return vulnerability.Bitnami
+	case "kubernetes":
+		return vulnerability.Kubernetes
 	default:
 		return vulnerability.Unknown
 	}

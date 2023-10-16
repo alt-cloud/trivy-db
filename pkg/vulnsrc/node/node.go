@@ -8,13 +8,12 @@ import (
 	"strconv"
 	"strings"
 
-	bolt "go.etcd.io/bbolt"
-	"golang.org/x/xerrors"
-
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/bucket"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
+	bolt "go.etcd.io/bbolt"
+	"golang.org/x/xerrors"
 )
 
 const (

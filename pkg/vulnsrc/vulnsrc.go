@@ -13,6 +13,7 @@ import (
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/debian"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/ghsa"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/glad"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/k8svulndb"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/mariner"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/node"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/nvd"
@@ -55,6 +56,7 @@ var (
 		chainguard.NewVulnSrc(),
 		bitnami.NewVulnSrc(),
 
+		k8svulndb.NewVulnSrc(),
 		// Language-specific packages
 		bundler.NewVulnSrc(),
 		composer.NewVulnSrc(),

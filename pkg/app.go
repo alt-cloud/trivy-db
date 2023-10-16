@@ -4,7 +4,6 @@ import (
 	"time"
 
 	"github.com/alt-cloud/trivy-db/pkg/utils"
-
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc"
 	"github.com/urfave/cli"
 )

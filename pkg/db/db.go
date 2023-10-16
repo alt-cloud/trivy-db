@@ -8,11 +8,10 @@ import (
 	"runtime/debug"
 	"strings"
 
-	bolt "go.etcd.io/bbolt"
-	"golang.org/x/xerrors"
-
 	"github.com/alt-cloud/trivy-db/pkg/log"
 	"github.com/alt-cloud/trivy-db/pkg/types"
+	bolt "go.etcd.io/bbolt"
+	"golang.org/x/xerrors"
 )
 
 type CustomPut func(dbc Operation, tx *bolt.Tx, adv interface{}) error

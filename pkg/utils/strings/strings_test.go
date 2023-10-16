@@ -4,7 +4,6 @@ import (
 	"testing"
 
 	"github.com/alt-cloud/trivy-db/pkg/utils/strings"
-
 	"github.com/stretchr/testify/assert"
 )
 

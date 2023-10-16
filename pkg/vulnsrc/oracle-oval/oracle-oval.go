@@ -8,15 +8,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	version "github.com/knqyf263/go-rpm-version"
-	bolt "go.etcd.io/bbolt"
-	"golang.org/x/xerrors"
-
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/utils"
 	ustrings "github.com/alt-cloud/trivy-db/pkg/utils/strings"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
+	version "github.com/knqyf263/go-rpm-version"
+	bolt "go.etcd.io/bbolt"
+	"golang.org/x/xerrors"
 )
 
 var (

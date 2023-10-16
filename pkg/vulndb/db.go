@@ -4,15 +4,14 @@ import (
 	"log"
 	"time"
 
-	bolt "go.etcd.io/bbolt"
-	"golang.org/x/xerrors"
-	"k8s.io/utils/clock"
-
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/metadata"
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
+	bolt "go.etcd.io/bbolt"
+	"golang.org/x/xerrors"
+	"k8s.io/utils/clock"
 )
 
 type VulnDB interface {

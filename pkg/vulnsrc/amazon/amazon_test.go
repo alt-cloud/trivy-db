@@ -5,12 +5,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
-
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/utils"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/amazon"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
 )
 
 func TestMain(m *testing.M) {

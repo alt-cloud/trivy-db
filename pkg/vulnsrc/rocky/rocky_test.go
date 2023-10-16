@@ -6,12 +6,10 @@ import (
 
 	"github.com/alt-cloud/trivy-db/pkg/db"
 	"github.com/alt-cloud/trivy-db/pkg/dbtest"
-	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
-
 	"github.com/alt-cloud/trivy-db/pkg/types"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/rocky"
 	"github.com/alt-cloud/trivy-db/pkg/vulnsrc/vulnerability"
-
+	"github.com/alt-cloud/trivy-db/pkg/vulnsrctest"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

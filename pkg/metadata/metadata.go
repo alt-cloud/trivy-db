@@ -6,9 +6,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"golang.org/x/xerrors"
-
 	"github.com/alt-cloud/trivy-db/pkg/db"
+	"golang.org/x/xerrors"
 )
 
 const metadataFile = "metadata.json"
